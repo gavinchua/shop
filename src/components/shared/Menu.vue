@@ -60,10 +60,20 @@ export default {
 </script>
 
 <style lang="stylus">
-.vnb__menu-options__option__link {
-  @apply px-2 py-4 font-semibold text-gray-600 text-lg
-  &:hover {
-    @apply text-gray-900
-  }
-}
+.vnb
+  &__collapse-button
+    @apply m-0
+    &:hover
+      @apply bg-transparent
+  &__menu-options
+    &__option__link
+      @apply px-2 py-4 font-semibold text-gray-600 text-base
+      @media (min-width: 1024px)
+        @apply text-lg
+      &:hover
+        @apply text-gray-900
+    &--left
+      padding-left 15px
+      @media (min-width: 1024px)
+        padding-left 30px
 </style>
