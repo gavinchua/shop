@@ -30,9 +30,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-/* purgecss start ignore */
 .item
   img
     @apply mt-3
-/* purgecss end ignore */
 </style>
