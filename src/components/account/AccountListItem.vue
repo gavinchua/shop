@@ -17,6 +17,14 @@
             </button>
           </dd>
         </template>
+        <template v-else-if="name === 'birthday'">
+          <dt>
+            {{ name | uppercase }}
+          </dt>
+          <dd>
+            {{ val | date }}
+          </dd>
+        </template>
         <template v-else>
           <dt>
             {{ name | uppercase }}
@@ -40,12 +48,16 @@ export default {
     ModalChangePassword
   },
   filters: {
-    uppercase: function(v) {
+    uppercase(v) {
       if (!v) {
         return ''
       }
 
       return v.toString().toUpperCase()
+    },
+    date(v) {
+      const options = { year: 'numeric', month: 'short', day: 'numeric' }
+      return new Date(v).toLocaleDateString('en-GB', options)
     }
   },
   props: {
