@@ -2,7 +2,7 @@ import axios from 'axios'
 import app from '@/main'
 
 const apiClient = axios.create({
-  baseURL: 'http://demo1231425.mockable.io/'
+  baseURL: process.env.VUE_APP_AXIOS_BASEURL
 })
 
 apiClient.interceptors.request.use(config => {
