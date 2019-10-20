@@ -61,7 +61,7 @@
         Submit
       </button>
       <small>
-        You are able to login with any username &amp; password.
+        Login with any username &amp; password.
       </small>
     </form>
   </div>

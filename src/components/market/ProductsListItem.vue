@@ -18,8 +18,6 @@
 </template>
 
 <script>
-// import axios from 'axios';
-
 export default {
   name: 'ProductsListItem',
   props: {
@@ -36,10 +34,5 @@ export default {
 .item
   img
     @apply mt-3
-    // height 240px
-    // @media (min-width: 768px)
-    //   height 280px
-    // @media (min-width: 1280px)
-    //   height 320px
 /* purgecss end ignore */
 </style>

@@ -43,7 +43,7 @@ export default {
   mounted() {
     this.$store.watch(
       () => this.getUserLogin, (userLogin) => {
-        userLogin ? this.checkLogin = true : this.checkLogin = false
+        this.checkLogin = userLogin
       }
     )
   },

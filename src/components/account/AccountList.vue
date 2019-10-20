@@ -19,11 +19,6 @@ export default {
   components: {
     AccountListItem
   },
-  data() {
-    return {
-
-    }
-  },
   computed: {
     ...mapGetters('appUser', [
       'getUser'

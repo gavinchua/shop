@@ -40,7 +40,11 @@ export default {
   },
   filters: {
     uppercase: function(v) {
-      return v.toUpperCase()
+      if (!v) {
+        return ''
+      }
+
+      return v.toString().toUpperCase()
     }
   },
   props: {
@@ -57,19 +61,6 @@ export default {
     changePassword() {
       this.$modal.show('modal-changePassword')
     }
-    // deleteItem(id) {
-    //   // dispatch should be performed after axios.delete
-    //   this.$store.dispatch('appData/commitRemoveAppData', id);
-    //   axios.delete(`http://www.amock.io/api/gavinchua/idea/delete/${id}`)
-    //     .then(function(response) {
-    //       console.log(response);
-    //       // should be here
-    //       // this.$store.dispatch('appData/commitRemoveAppData', id);
-    //     })
-    //     .catch(function(error) {
-    //       console.log(error);
-    //     });
-    // }
   }
 }
 </script>
