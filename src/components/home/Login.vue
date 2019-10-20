@@ -108,7 +108,7 @@ export default {
         return
       }
 
-      console.log('SUBMITTING DATA TO API :-)\n\n' + JSON.stringify(this.form))
+      console.log('SUBMITTING DATA TO API :-)\n\n' + JSON.stringify(this.form)) // eslint-disable-line no-console
       this.sendFormData()
     },
     sendFormData() {
@@ -121,14 +121,14 @@ export default {
           // this.$store.dispatch('appUser/fetchAppUser', '3522314150')
           // this.$store.dispatch('appProducts/fetchAppProducts')
           // this.$router.push('market')
-          console.log('LOGIN SUCCESS!! :-)\n\n', response)
+          console.log('LOGIN SUCCESS!! :-)\n\n', response)  // eslint-disable-line no-console
         })
         .catch((error) => {
           this.message = `
             There is an error logging in.
             UserID=${this.form.username} & Password=${this.form.password}
           `
-          console.log(error)
+          console.log(error)  // eslint-disable-line no-console
         })
       // API is invalid. For mockup purpose
       this.$store.dispatch('appUser/commitUserLogin', true)

@@ -50,7 +50,7 @@ export default {
   methods: {
     vnbItemClicked(text) {
       if (text === 'Log Out') {
-        console.log('Logging out...')
+        console.log('Logging out...') // eslint-disable-line no-console
         this.$store.dispatch('appUser/commitUserLogin', false)
         this.$router.push('home')
       }

@@ -116,7 +116,7 @@ export default {
         return
       }
 
-      console.log('SUBMITTING DATA TO API :-)\n\n' + JSON.stringify(this.form.uid))
+      console.log('SUBMITTING DATA TO API :-)\n\n' + JSON.stringify(this.form.uid)) // eslint-disable-line no-console
       this.sendFormData()
     },
     sendFormData() {
@@ -125,14 +125,14 @@ export default {
       axios.post(`user/${this.form.uid}/password/${this.form.npassword}`)
         .then((response) => {
           this.message = 'Password changed successfully!'
-          console.log('PASSWORD CHANGED SUCCESS!! :-)\n\n', response)
+          console.log('PASSWORD CHANGED SUCCESS!! :-)\n\n', response) // eslint-disable-line no-console
         })
         .catch((error) => {
           this.message = `
             There is an error changing your password.
             UserID=${this.form.uid} & Password=${this.form.npassword}
           `
-          console.log(error)
+          console.log(error)  // eslint-disable-line no-console
         })
     }
   }

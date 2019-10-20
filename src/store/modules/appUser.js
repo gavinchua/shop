@@ -25,7 +25,7 @@ const actions = {
       .then(response => {
         commit('setUser', response.data[0].user)
       })
-      .catch(error => console.log(error))
+      .catch(error => console.log(error)) // eslint-disable-line no-console
   },
   commitUserLogin({ commit }, payload) {
     commit('setUserLogin', payload)

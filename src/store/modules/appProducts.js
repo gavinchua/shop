@@ -20,7 +20,7 @@ const actions = {
       .then(response => {
         commit('setProducts', response.data[0].products)
       })
-      .catch(error => console.log(error))
+      .catch(error => console.log(error)) // eslint-disable-line no-console
   }
 }
 
