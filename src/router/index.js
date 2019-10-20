@@ -10,7 +10,14 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home
+    component: Home,
+    beforeEnter: (to, from, next) => {
+      if (store.getters['appUser/getUserLogin']) {
+        next('./market')
+      } else {
+        next()
+      }
+    }
   },
   {
     path: '/about-us',
