@@ -1,14 +1,10 @@
 <template>
-  <router-link
-    to="/"
-    class="mr-5"
-  >
+  <div class="logo">
     <img
-      class="logo"
       alt="Logo"
       src="@/assets/img/logo.png"
     >
-  </router-link>
+  </div>
 </template>
 
 <script>
@@ -19,7 +15,8 @@ export default {
 
 <style lang="stylus">
 .logo
-  width 50px
-  @media (min-width: 768px)
-    width 80px
+  img
+    width 50px
+    @media (min-width: 768px)
+      width 80px
 </style>
