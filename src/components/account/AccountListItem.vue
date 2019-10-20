@@ -4,25 +4,26 @@
       <dl
         v-for="(val, name, i) in item"
         :key="i"
-        class="w-full md:w-1/2"
+        class="w-full"
+        :class="setClass(name)"
       >
         <template v-if="name === 'password'">
-          <dd>
-            {{ name | uppercase }}
-          </dd>
           <dt>
+            {{ name | uppercase }}
+          </dt>
+          <dd>
             <button @click="changePassword">
               Change Password
             </button>
-          </dt>
+          </dd>
         </template>
         <template v-else>
-          <dd>
-            {{ name | uppercase }}
-          </dd>
           <dt>
-            {{ val }}
+            {{ name | uppercase }}
           </dt>
+          <dd>
+            {{ val }}
+          </dd>
         </template>
       </dl>
     </div>
@@ -58,6 +59,9 @@ export default {
     }
   },
   methods: {
+    setClass(name) {
+      return (name !== 'about') ? 'md:w-1/2' : ''
+    },
     changePassword() {
       this.$modal.show('modal-changePassword')
     }
@@ -70,8 +74,8 @@ export default {
   dl
     & + dl
       @apply mt-5
-    dd
-      @apply font-bold
     dt
-      @apply break-words
+      @apply font-bold
+    dd
+      @apply break-words whitespace-pre -mx-1
 </style>
