@@ -60,6 +60,7 @@ export default {
 </script>
 
 <style lang="stylus">
+/* purgecss start ignore */
 .vnb
   &__collapse-button
     @apply m-0
@@ -76,4 +77,5 @@ export default {
       padding-left 15px
       @media (min-width: 1024px)
         padding-left 30px
+/* purgecss end ignore */
 </style>

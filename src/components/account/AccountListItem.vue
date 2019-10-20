@@ -72,10 +72,14 @@ export default {
 <style scoped lang="stylus">
 .accountlistitem
   dl
+    @media (min-width: 768px)
+      @apply mb-5
     & + dl
       @apply mt-5
+      @media (min-width: 768px)
+        @apply mt-0
     dt
       @apply font-bold
     dd
-      @apply break-words whitespace-pre -mx-1
+      @apply break-words whitespace-pre-wrap
 </style>
