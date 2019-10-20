@@ -45,14 +45,6 @@ const routes = [
     )
   },
   {
-    path: '/faqs',
-    name: 'faqs',
-    component: () => import(
-      /* webpackChunkName: "faqs" */
-      '../views/FAQs'
-    )
-  },
-  {
     path: '/help-desk',
     name: 'helpdesk',
     component: () => import(
