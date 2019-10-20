@@ -10,6 +10,10 @@ http://demo1231425.mockable.io/user
 ## Built with TailwindCSS
 https://tailwindcss.com/
 
+#### Important note:
+Auth is currently handled only in vuex therefore user gets logout after reloading browser.  
+The app can be better improved with JWT and local storage.
+
 ## Project setup
 ```
 yarn
