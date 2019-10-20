@@ -13,7 +13,6 @@ export default {
             text: 'Corporate',
             subMenuOptions: [
               {
-                isLinkAction: true,
                 type: 'link',
                 text: 'About Us',
                 path: './about-us'
@@ -55,6 +54,13 @@ export default {
             type: 'link',
             text: 'Subscribe',
             path: './subscribe'
+          }
+        ],
+        menuOptionsRight: [
+          {
+            type: 'button',
+            text: 'Login',
+            path: './'
           }
         ]
       }

@@ -13,7 +13,6 @@ export default {
             text: 'Corporate',
             subMenuOptions: [
               {
-                isLinkAction: true,
                 type: 'link',
                 text: 'About Us',
                 path: './about-us'
