@@ -117,10 +117,19 @@ export default {
       // API is invalid
       axios.get(`user/${this.form.username}`)
         .then((response) => {
-          // this.$store.dispatch('appUser/commitUserLogin', true)
-          // this.$store.dispatch('appUser/fetchAppUser', '3522314150')
-          // this.$store.dispatch('appProducts/fetchAppProducts')
-          // this.$router.push('market')
+          // Promise.all(
+          //   [
+          //     this.$store.dispatch('appUser/fetchAppUser', '3522314150'),
+          //     this.$store.dispatch('appProducts/fetchAppProducts')
+          //   ]
+          // ).catch(
+          //   error => console.log(error) // eslint-disable-line no-console
+          // ).finally(
+          //   () => {
+          //     this.$store.dispatch('appUser/commitUserLogin', true),
+          //     this.$router.push('market')
+          //   }
+          // )
           console.log('LOGIN SUCCESS!! :-)\n\n', response)  // eslint-disable-line no-console
         })
         .catch((error) => {
@@ -131,10 +140,19 @@ export default {
           console.log(error)  // eslint-disable-line no-console
         })
       // API is invalid. For mockup purpose
-      this.$store.dispatch('appUser/commitUserLogin', true)
-      this.$store.dispatch('appUser/fetchAppUser', '3522314150')
-      this.$store.dispatch('appProducts/fetchAppProducts')
-      this.$router.push('market')
+      Promise.all(
+        [
+          this.$store.dispatch('appUser/fetchAppUser', '3522314150'),
+          this.$store.dispatch('appProducts/fetchAppProducts')
+        ]
+      ).catch(
+        error => console.log(error) // eslint-disable-line no-console
+      ).finally(
+        () => {
+          this.$store.dispatch('appUser/commitUserLogin', true),
+          this.$router.push('market')
+        }
+      )
     }
   }
 }
