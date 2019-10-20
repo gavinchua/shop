@@ -4,7 +4,7 @@ export default {
       navbarOptions: {
         elementId: 'main-navbar',
         isUsingVueRouter: true,
-        mobileBreakpoint: 768,
+        mobileBreakpoint: 767,
         ariaLabelMainNav: 'Main Navigation',
         tooltipAnimationType: 'shift-away',
         menuOptionsLeft: [
