@@ -7,7 +7,7 @@ http://gavinchua.com/vue-shop/
 http://demo1231425.mockable.io/products  
 http://demo1231425.mockable.io/user
 
-## Build with TailwindCSS
+## Built with TailwindCSS
 https://tailwindcss.com/
 
 ## Project setup
